@@ -29,7 +29,7 @@ const output = (
 ) => {
   console.log(
     colorForeground,
-    `[${generateTime()}] [${typeOutput}] ${title ? ` ${title}` : ''} ${text}`,
+    `[${generateTime()}] [${typeOutput}] ${title ? `${title}` : ''} ${text}`,
     colors.Reset
   );
 };
