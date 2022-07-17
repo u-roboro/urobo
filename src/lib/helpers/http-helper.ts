@@ -31,6 +31,6 @@ export const httpHelper = {
   }),
   serverError: (error: Error) => ({
     statusCode: 500,
-    body: ServerError(error.message),
+    body: ServerError(error),
   }),
 };
