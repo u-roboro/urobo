@@ -3,33 +3,34 @@ import {
   ServerError,
   UnauthorizedError,
 } from '../../errors';
+import { HttpResponse } from '../../protocols';
 
-export const httpHelper = {
-  badRequest: (error: Error) => ({
-    status: 400,
+export const httpResponse = {
+  badRequest: (error: Error): HttpResponse => ({
+    statusCode: 400,
     body: error,
   }),
-  forbidden: (error: Error) => ({
+  forbidden: (error: Error): HttpResponse => ({
     statusCode: 403,
     body: error,
   }),
-  unauthorized: () => ({
+  unauthorized: (): HttpResponse => ({
     statusCode: 401,
     body: UnauthorizedError(),
   }),
-  ok: (data: any) => ({
+  ok: (data: any): HttpResponse => ({
     statusCode: 200,
     body: data,
   }),
-  noContent: () => ({
+  noContent: (): HttpResponse => ({
     statusCode: 204,
     body: null,
   }),
-  accessDenied: () => ({
+  accessDenied: (): HttpResponse => ({
     statusCode: 403,
     body: AccessDeniedError(),
   }),
-  serverError: (error: Error) => ({
+  serverError: (error: Error): HttpResponse => ({
     statusCode: 500,
     body: ServerError(error),
   }),

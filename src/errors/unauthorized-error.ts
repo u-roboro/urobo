@@ -1,6 +1,7 @@
-export const UnauthorizedError = () => {
-  return {
-    name: 'UnauthorizedError',
-    message: 'You are not authorized to perform this action.',
-  };
-};
+import { locale } from '../consts/locale';
+import { ErrorCustomized } from '../protocols';
+
+export const UnauthorizedError = (): ErrorCustomized => ({
+  name: 'UnauthorizedError',
+  message: locale.exceptionsMessage.unauthorized,
+});

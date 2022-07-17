@@ -1,13 +1,16 @@
-import { UniqueConstrainError } from './unique-constrain-error';
+import { locale } from '../consts/locale';
+import { ErrorCustomized } from '../protocols';
 
-export const ServerError = (error: any) => {
+import { DocumentExistError } from './document-exist-error';
+
+export const ServerError = (error: any): ErrorCustomized => {
   switch (error.name) {
     case 'SequelizeUniqueConstraintError':
-      return UniqueConstrainError(error.errors[0]?.message);
+      return DocumentExistError();
     default:
       return {
         name: 'ServerError',
-        message: error.message,
+        message: error.message || locale.exceptionsMessage.serverError,
       };
   }
 };
