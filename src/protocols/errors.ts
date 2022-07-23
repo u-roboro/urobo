@@ -4,7 +4,7 @@ export type ErrorTemplate = {
   readonly options?: {
     translate?: boolean;
     localeKey?: string;
-    params?: string[];
+    params?: any[];
     name: string;
     type: 'validation' | 'business' | 'system';
   };

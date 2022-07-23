@@ -1,3 +1,4 @@
-export * from './errors';
-export * from './protocols';
-export * from './utils';
+export * as errors from './errors';
+export * as protocols from './protocols';
+export * as utils from './utils';
+export * as consts from './consts';
