@@ -1,8 +1,0 @@
-{
-    "validationError": {
-        "required": "% es requerido",
-        "minlength": "El valor debe tener al menos % caracteres",
-        "maxlength": "El valor no puede tener más de % caracteres",
-        "type": "El tipo de % es incorrecto. Se esperaba un %"
-    }
-}

@@ -1,0 +1,13 @@
+{
+  "default": "Sucedio algo interno con la libreria",
+  "validationError": {
+    "required": "{0} es requerido",
+    "minLength": "El valor debe tener al menos {0} caracteres",
+    "maxLength": "El valor no puede tener más de {0} caracteres",
+    "type": "El tipo de {0} es incorrecto. Se esperaba un {1}"
+  },
+  "translation": {
+    "requiredLocaleKey": "La llave para encontrar la traducción es requerida",
+    "requiredParams": "Los parametros para encontrar la traducción son requeridos"
+  }
+}
