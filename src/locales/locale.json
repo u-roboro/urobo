@@ -2,12 +2,16 @@
   "default": "Sucedio algo interno con la libreria",
   "validationError": {
     "required": "{0} es requerido",
-    "minLength": "El valor debe tener al menos {0} caracteres",
-    "maxLength": "El valor no puede tener más de {0} caracteres",
-    "type": "El tipo de {0} es incorrecto. Se esperaba un {1}"
+    "minLength": "El valor de {0} debe tener al menos {0} caracteres",
+    "maxLength": "El valor de {0} no puede tener más de {0} caracteres",
+    "type": "El tipo de la propiedad {0} es invalido. Se esperaba un {1}",
+    "email": "La propiedad {0} debe ser un email válido"
   },
   "translation": {
     "requiredLocaleKey": "La llave para encontrar la traducción es requerida",
     "requiredParams": "Los parametros para encontrar la traducción son requeridos"
+  },
+  "messageResponse": {
+    "internal": "Error interno del servidor"
   }
 }

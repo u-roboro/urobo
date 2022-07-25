@@ -2,13 +2,13 @@ import { BaseError } from './base-error';
 import { HttpStatusCode } from '../consts/http-status-code';
 import { ErrorName } from '../consts/errors';
 
-export class MinLengthError extends BaseError {
-  constructor(property: string, min: number) {
+export class EmailError extends BaseError {
+  constructor(property: string) {
     super('', HttpStatusCode.BAD_REQUEST, {
       translate: true,
-      localeKey: 'validationError.minLength',
-      params: [property, min],
-      name: ErrorName.MIN_LENGTH,
+      localeKey: 'validationError.email',
+      params: [property],
+      name: ErrorName.EMAIL,
       type: 'validation',
     });
   }

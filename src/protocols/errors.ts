@@ -6,6 +6,6 @@ export type ErrorTemplate = {
     localeKey?: string;
     params?: any[];
     name: string;
-    type: 'validation' | 'business' | 'system';
+    type: 'validation' | 'business' | 'system' | 'internal';
   };
 };

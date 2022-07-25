@@ -11,10 +11,10 @@ export class BaseError extends Error implements ErrorTemplate {
       localeKey?: string;
       params?: any[];
       name: string;
-      type: 'validation' | 'business' | 'system';
+      type: 'validation' | 'business' | 'system' | 'internal';
     } = {
-      name: '',
-      type: 'system',
+      name: 'Internal Server Error',
+      type: 'internal',
     }
   ) {
     super(message);
