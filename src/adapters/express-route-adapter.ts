@@ -16,7 +16,7 @@ export const adaptRoute = (controller: Controller) => {
     } catch (ex) {
       res.status(ex.status).json({
         message: ex.message,
-        type: ex.options.type,
+        type: ex?.options?.type || 'internal',
       });
     }
   };
